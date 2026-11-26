@@ -1,0 +1,146 @@
+:root {
+    --bs-link-color: #400010;
+    --bs-link-hover-color: #854352;
+}
+
+body {
+    color: #400010;
+}
+
+[hidden] {
+    display: none ;
+}
+
+.uky-footer-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.uky-brand-circle {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.uky-style-card h3,
+.uky-popular-card h3 {
+    font-weight: bold;
+}
+
+.brand-name:hover,
+.brand-name:focus,
+.signup-browse:hover,
+.signup-browse:focus {
+    color: #faf5e9;
+}
+
+.btn {
+    --bs-btn-focus-shadow-rgb: 133, 67, 82;
+}
+
+.btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.signup-submit.btn:hover,
+.signup-submit.btn:focus-visible {
+    color: #faf5e9;
+    border-color: #400010;
+}
+
+.search-form .form-control,
+.search-form .btn {
+    border-radius: 0;
+}
+
+.search-form .form-control:focus,
+.form-control:focus,
+.form-select:focus {
+    border-color: #854352;
+    box-shadow: 0 0 0 3px rgba(133, 67, 82, 0.2);
+}
+
+.form-check-input:checked {
+    background-color: #400010;
+    border-color: #400010;
+}
+
+.signup-field .is-invalid,
+.checkout-field .is-invalid {
+    border-color: #b42338;
+    background-image: none;
+}
+
+.invalid-feedback {
+    color: #a51d32;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.signup-agreement + .invalid-feedback,
+.checkout-agreement + .invalid-feedback {
+    margin-bottom: 16px;
+}
+
+.uky-status {
+    border: 1px solid #c7b5ad;
+    background-color: #f0e8df;
+    color: #400010;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.card {
+    color: #400010;
+}
+
+button.order-text-link {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.bag-item-details {
+    overflow-wrap: anywhere;
+}
+
+.checkout-field .form-select {
+    padding-right: 36px;
+}
+
+.signup-brand,
+.signup-panel {
+    padding-left: 48px;
+    padding-right: 48px;
+}
+
+:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+
+@media (max-width: 991.98px) {
+    .signup-brand,
+    .signup-panel {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .bag-totals {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .signup-brand,
+    .signup-panel {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .uky-hero-pause {
+        display: none;
+    }
+}
