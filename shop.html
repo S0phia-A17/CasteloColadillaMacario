@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UKY | Shop</title>
+    <link rel="stylesheet" href="shop.css">
+    <script src="shop.js" defer></script>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="uky-header">
+
+        <div class="nav-top">
+            <a href="index.html" class="nav-logo">
+                <img src="uky-logo.png" alt="UKY Logo">
+            </a>
+
+            <h1 class="uky-title">UKY</h1>
+
+            <form class="search-bar" id="search-form">
+                <input type="search" id="search-input"
+                       placeholder="Search UKY"
+                       aria-label="Search products">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+        <div class="nav-bottom">
+            <nav class="nav-links">
+                <button data-nav="new">New Arrivals</button>
+                <button data-nav="women">Women</button>
+                <button data-nav="men">Men</button>
+                <button data-nav="kids">Kids</button>
+                <button data-nav="accessories">Accessories</button>
+                <button data-nav="brands">Brands</button>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="favorites-button" class="nav-action">
+                    <span class="nav-icon">♡</span>
+                    Favorites
+                </button>
+
+                <a href="signup.html" class="nav-action">
+                    <span class="nav-icon">♙</span>
+                    Sign In
+                </a>
+
+                <a href= "cart.html" class="nav-action">
+                    <span class="nav-icon">🛒</span>
+                    Cart
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SHOP TITLE -->
+    <section class="shop-heading">
+        <h1>Discover Your Next Find</h1>
+        <p>Unique finds. Second chances. Timeless style.</p>
+    </section>
+
+    <!-- SHOP CONTENT -->
+    <main class="shop-container">
+
+        <!-- FILTER SIDEBAR -->
+        <aside class="sidebar">
+            <h2>Categories</h2>
+
+            <button class="filter active" data-category="all">
+                All Products
+            </button>
+            <button class="filter" data-category="women">
+                Women
+            </button>
+            <button class="filter" data-category="men">
+                Men
+            </button>
+            <button class="filter" data-category="kids">
+                Kids
+            </button>
+            <button class="filter" data-category="tops">
+                Tops
+            </button>
+            <button class="filter" data-category="bottoms">
+                Bottoms
+            </button>
+            <button class="filter" data-category="outerwear">
+                Outerwear
+            </button>
+            <button class="filter" data-category="accessories">
+                Accessories
+            </button>
+            <button class="filter" data-category="brands">
+                Brands
+            </button>
+        </aside>
+
+        <!-- PRODUCTS -->
+        <section class="products-area">
+
+            <div class="products-toolbar">
+                <h2 id="section-title">All Products</h2>
+
+                <select id="sort">
+                    <option value="default">Sort By: Newest</option>
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
+                </select>
+            </div>
+
+            <p class="product-count" id="product-count"></p>
+
+            <div class="product-grid" id="product-grid">
+                <!-- Product cards appear here -->
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 UKY. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

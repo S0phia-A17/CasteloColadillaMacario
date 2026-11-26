@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>UKY | Find Your Own Style</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="bootstrap-custom.css">
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="header-top">
+                <a class="logo" href="index.html">
+                    <img src="uky-logo.png" alt="UKY home">
+                </a>
+                <a class="brand-name" href="index.html">UKY</a>
+                <form class="search-form" action="shop.html" method="get">
+                    <input type="search" name="search" placeholder="Search UKY" aria-label="Search products" class="form-control">
+                    <button type="submit" class="btn">Search</button>
+                </form>
+            </div>
+            <div class="header-bottom">
+                <nav class="category-nav nav" aria-label="Product categories">
+                    <a href="shop.html?category=new-arrivals" class="nav-link">New Arrivals</a>
+                    <a href="shop.html?category=women" class="nav-link">Women</a>
+                    <a href="shop.html?category=men" class="nav-link">Men</a>
+                    <a href="shop.html?category=kids" class="nav-link">Kids</a>
+                    <a href="shop.html?category=accessories" class="nav-link">Accessories</a>
+                    <a href="shop.html?category=brands" class="nav-link">Brands</a>
+                </nav>
+                <nav class="account-nav nav" aria-label="Your account">
+                    <a href="favorites.html" class="nav-link">
+                        <span class="account-icon" aria-hidden="true">♡</span>
+                        <span>Favorites</span>
+                    </a>
+                    <a href="signup.html" class="nav-link">
+                        <span class="profile-icon" aria-hidden="true"></span>
+                        <span>Sign Up</span>
+                    </a>
+                    <a href="cart.html" class="nav-link">
+                        <span class="account-icon" aria-hidden="true">🛒</span>
+                        <span>Bag (<span data-bag-count="">1</span>)</span>
+                    </a>
+                </nav>
+            </div>
+        </header>
+        <main id="main-content">
+            <section class="uky-hero">
+                <div class="uky-hero-slides">
+                    <div class="uky-hero-slide uky-slide-one">
+                        <img src="heroone.jpg" alt="heroone">
+                    </div>
+                    <div class="uky-hero-slide uky-slide-two">
+                        <img src="herotwo.jpg" alt="herotwo>
+                    </div>
+                    <div class="uky-hero-slide uky-slide-three">
+                        <img src="herothree.jpg" alt="herothree">
+                    </div>
+                    <div class="uky-hero-slide uky-slide-four">
+                        <img src="herofour.jpg" alt="herofour">
+                    </div>
+                    <div class="uky-hero-slide uky-slide-five">
+                        <img src="herofive.jpg" alt="herofive">
+                    </div>
+                </div>
+                <div class="uky-hero-overlay"></div>
+                <div class="uky-hero-content">
+                    <h1>Find Your Own Style.</h1>
+                    <p>Discover unique preloved pieces, ready for their next chapter.</p>
+                    <a href="shop.html" class="uky-hero-button btn">SHOP NOW</a>
+                </div>
+            </section>
+            <section class="uky-selling">
+                <div class="uky-selling-content">
+                    <h2>Start Selling with UKY</h2>
+                    <p>Give your preloved pieces a new home. Clear your closet and make room for your next great find.</p>
+                    <a href="sell.html" class="uky-selling-button btn">SELL WITH US</a>
+                </div>
+                <div class="uky-selling-photo">
+                    <img src="sellingone.jpg" alt="sellingone">
+                </div>
+            </section>
+            <section class="uky-brands" id="brands">
+                <div class="uky-brands-heading">
+                    <div>
+                        <h2>Brands You'll Love</h2>
+                        <p>Discover preloved finds from your favorite brands.</p>
+                    </div>
+                    <a href="shop.html?category=brands" class="uky-brands-all">SHOP ALL</a>
+                </div>
+                <div class="row g-3">
+                    <div class="col-6 col-md-4 col-xxl-2">
+                        <a href="shop.html?brand=dbtk" class="uky-brand-circle">DBTK</a>
+                    </div>
+                    <div class="col-6 col-md-4 col-xxl-2">
+                        <a href="shop.html?brand=mn-la" class="uky-brand-circle">MN+LA</a>
+                    </div>
+                    <div class="col-6 col-md-4 col-xxl-2">
+                        <a href="shop.html?brand=skoop" class="uky-brand-circle">SKOOP</a>
+                    </div>
+                    <div class="col-6 col-md-4 col-xxl-2">
+                        <a href="shop.html?brand=ugat" class="uky-brand-circle">UGAT</a>
+                    </div>
+                    <div class="col-6 col-md-4 col-xxl-2">
+                        <a href="shop.html?brand=dos-mil" class="uky-brand-circle">DOS Mil</a>
+                    </div>
+                    <div class="col-6 col-md-4 col-xxl-2">
+                        <a href="shop.html?brand=boss" class="uky-brand-circle">BOSS</a>
+                    </div>
+                </div>
+            </section>
+            <section class="uky-discovery">
+                <div class="uky-discovery-inner">
+                    <div class="uky-discovery-heading">
+                        <h2>Shop by Style</h2>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <a href="shop.html?style=boots" class="uky-style-card">
+                                <img src="sbsone.png" alt="sbsone">
+                                <h3>Boots</h3>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <a href="shop.html?style=skirts" class="uky-style-card">
+                                <img src="sbstwo.png" alt="sbstwo">
+                                <h3>Skirts</h3>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <a href="shop.html?style=dresses" class="uky-style-card">
+                                <img src="sbsthree.png" alt="sbsthree">
+                                <h3>Dresses</h3>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <a href="shop.html?style=bags" class="uky-style-card">
+                                <img src="sbsfour.png" alt="sbsfour">
+                                <h3>Bags</h3>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <a href="shop.html?style=hats" class="uky-style-card">
+                                <img src="sbsfive.png" alt="sbsfive">
+                                <h3>Hats</h3>
+                            </a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <a href="shop.html?style=pants" class="uky-style-card">
+                                <img src="sbssix.png" alt="sbssix">
+                                <h3>Pants</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="uky-discovery">
+                <div class="uky-discovery-inner">
+                    <div class="uky-discovery-heading">
+                        <h2>Popular This Week</h2>
+                        <p class="uky-scroll-hint">Scroll to explore more</p>
+                    </div>
+                    <div class="uky-popular-track">
+                        <a href="shop.html?search=sneakers" class="uky-popular-card">
+                            <img src="ptwone.png" alt="ptwone">
+                        </a>
+                        <a href="shop.html?search=high-top+sneakers" class="uky-popular-card">
+                            <img src="ptwtwo.png" alt="ptwtwo">
+                        </a>
+                        <a href="shop.html?search=slides" class="uky-popular-card">
+                            <img src="ptwthree.png" alt="ptwthree">
+                        </a>
+                        <a href="shop.html?search=black+dress" class="uky-popular-card">
+                            <img src="ptwfour.png" alt="ptwfour">
+                        </a>
+                        <a href="shop.html?search=preloved" class="uky-popular-card">
+                            <img src="ptwfive.png" alt="ptwfive">
+                        </a>
+                        <a href="shop.html?search=preloved" class="uky-popular-card">
+                            <img src="ptwsix.png" alt="ptwsix">
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="uky-footer">
+            <div class="uky-footer-inner">
+                <div class="row g-4">
+                    <div class="uky-footer-column col-12 col-sm-6 col-lg-3">
+                        <h2>UKY</h2>
+                        <a href="about.html">About Us</a>
+                        <a href="about.html#our-story">Our Story</a>
+                        <a href="about.html#preloved">Why Preloved?</a>
+                    </div>
+                    <div class="uky-footer-column col-12 col-sm-6 col-lg-3">
+                        <h2>Sell</h2>
+                        <a href="sell.html">Sell with UKY</a>
+                        <a href="sell.html#how-it-works">How It Works</a>
+                        <a href="sell.html#guidelines">Selling Guidelines</a>
+                        <a href="help.html#shipping">Shipping</a>
+                    </div>
+                    <div class="uky-footer-column col-12 col-sm-6 col-lg-3">
+                        <h2>Help</h2>
+                        <a href="help.html">Help Center</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="help.html#payments">Payment Options</a>
+                        <a href="help.html#returns">Returns Refunds</a>
+                    </div>
+                    <div class="uky-footer-intro col-12 col-sm-6 col-lg-3">
+                        <h2>Find Your Own Style.</h2>
+                        <p>Discover unique preloved pieces, explore fresh looks, and give great finds a second chapter.</p>
+                        <a href="shop.html" class="uky-footer-button btn">EXPLORE UKY</a>
+                    </div>
+                </div>
+            </div>
+            <div class="uky-footer-bottom">
+                <p>2026 UKY. All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>

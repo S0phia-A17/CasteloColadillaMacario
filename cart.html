@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Your Bag | UKY</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="bag-checkout.css">
+        <link rel="stylesheet" href="bootstrap-custom.css">
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="header-top">
+                <a class="logo" href="index.html">
+                    <img src="uky-logo.png" alt="UKY home">
+                </a>
+                <a class="brand-name" href="index.html">UKY</a>
+                <form class="search-form" action="shop.html" method="get">
+                    <input type="search" name="search" placeholder="Search UKY" aria-label="Search products" class="form-control">
+                    <button type="submit" class="btn">Search</button>
+                </form>
+            </div>
+            <div class="header-bottom">
+                <nav class="category-nav nav" aria-label="Product categories">
+                    <a href="shop.html?category=new-arrivals" class="nav-link">New Arrivals</a>
+                    <a href="shop.html?category=women" class="nav-link">Women</a>
+                    <a href="shop.html?category=men" class="nav-link">Men</a>
+                    <a href="shop.html?category=kids" class="nav-link">Kids</a>
+                    <a href="shop.html?category=accessories" class="nav-link">Accessories</a>
+                    <a href="shop.html?category=brands" class="nav-link">Brands</a>
+                </nav>
+                <nav class="account-nav nav" aria-label="Your account">
+                    <a href="favorites.html" class="nav-link">
+                        <span class="account-icon" aria-hidden="true">♡</span>
+                        <span>Favorites</span>
+                    </a>
+                    <a href="signup.html" class="nav-link">
+                        <span class="profile-icon" aria-hidden="true"></span>
+                        <span>Sign Up</span>
+                    </a>
+                    <a href="cart.html" class="nav-link">
+                        <span class="account-icon" aria-hidden="true">🛒</span>
+                        <span>Bag (<span data-bag-count="">1</span>)</span>
+                    </a>
+                </nav>
+            </div>
+        </header>
+        <main class="uky-order-main">
+            <div class="order-page-heading">
+                <div>
+                    <p class="order-eyebrow">YOUR NEXT GREAT FIND</p>
+                    <h1>Your bag</h1>
+                </div>
+                <span class="order-demo-tag">Demo bag</span>
+            </div>
+            <section class="bag-signup-banner">
+                <div>
+                    <h2>New to UKY?</h2>
+                    <p>Try our sign-up form and find your own style.</p>
+                </div>
+                <a href="signup.html" class="order-button order-button-outline btn">Sign up</a>
+            </section>
+            <p id="bag-status" class="alert uky-status" role="status" tabindex="-1" hidden></p>
+            <p class="alert uky-status" data-storage-note hidden>Your browser cannot save the demo bag. Changes last only on this page.</p>
+            <section class="order-card bag-card card" id="bag-filled">
+                <div class="bag-seller">
+                    <span class="seller-avatar" aria-hidden="true">U</span>
+                    <div>
+                        <h2>UKY Closet</h2>
+                        <p>Sample seller</p>
+                    </div>
+                </div>
+                <div class="row g-4 pt-4">
+                    <div class="col-12 col-lg-7">
+                        <div class="bag-item">
+                            <img src="sbsfour.png" alt="Vintage Shoulder Bag" class="bag-item-photo">
+                            <div class="bag-item-details">
+                                <span class="item-badge">PRELOVED</span>
+                                <h3>Vintage Shoulder Bag</h3>
+                                <p>Burgundy · Quantity: 1</p>
+                                <p class="item-price">₱390.00</p>
+                                <button class="order-text-link" type="button" id="remove-item" disabled>Remove item</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-5">
+                        <div class="bag-totals">
+                            <h3>Bag summary</h3>
+                            <div class="order-price-row">
+                                <span>Item subtotal</span>
+                                <span data-price="subtotal">₱450.00</span>
+                            </div>
+                            <div class="order-price-row order-price-total">
+                                <strong>Item total</strong>
+                                <strong data-price="subtotal">₱450.00</strong>
+                            </div>
+                            <p class="order-small-text">Delivery is shown at checkout.</p>
+                            <a href="checkout.html" class="order-button order-button-full btn">Checkout 1 item →</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="order-card card order-state-card mx-auto" id="bag-empty" hidden>
+                <h2>Your bag is empty.</h2>
+                <p>Give another preloved find a second chapter.</p>
+                <div class="order-state-actions">
+                    <a href="index.html" class="order-button btn">Back to home</a>
+                    <button type="button" class="order-button order-button-outline btn" id="restore-item" disabled>Restore sample item</button>
+                </div>
+            </section>
+            <div class="bag-bottom-links">
+                <a href="shop.html" class="order-text-link">← Continue shopping</a>
+                <p class="order-small-text">Sample item and price for your UKY project.</p>
+            </div>
+            <noscript>
+                <p class="alert uky-status">Enable JavaScript to remove the sample item and update your demo bag.</p>
+            </noscript>
+        </main>
+        <footer class="uky-footer">
+            <div class="uky-footer-inner">
+                <div class="row g-4">
+                    <div class="uky-footer-column col-12 col-sm-6 col-lg-3">
+                        <h2>UKY</h2>
+                        <a href="about.html">About Us</a>
+                        <a href="about.html#our-story">Our Story</a>
+                        <a href="about.html#preloved">Why Preloved?</a>
+                    </div>
+                    <div class="uky-footer-column col-12 col-sm-6 col-lg-3">
+                        <h2>Sell</h2>
+                        <a href="sell.html">Sell with UKY</a>
+                        <a href="sell.html#how-it-works">How It Works</a>
+                        <a href="sell.html#guidelines">Selling Guidelines</a>
+                        <a href="help.html#shipping">Shipping</a>
+                    </div>
+                    <div class="uky-footer-column col-12 col-sm-6 col-lg-3">
+                        <h2>Help</h2>
+                        <a href="help.html">Help Center</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="help.html#payments">Payment Options</a>
+                        <a href="help.html#returns">Returns Refunds</a>
+                    </div>
+                    <div class="uky-footer-intro col-12 col-sm-6 col-lg-3">
+                        <h2>Find Your Own Style.</h2>
+                        <p>Discover unique preloved pieces, explore fresh looks, and give great finds a second chapter.</p>
+                        <a href="shop.html" class="uky-footer-button btn">EXPLORE UKY</a>
+                    </div>
+                </div>
+            </div>
+            <div class="uky-footer-bottom">
+                <p>2026 UKY. All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>

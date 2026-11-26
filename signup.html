@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up | UKY</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+        <link rel="stylesheet" href="signup.css">
+        <link rel="stylesheet" href="bootstrap-custom.css">
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+        <main class="container-fluid p-0">
+            <div class="row g-0 min-vh-100">
+                <section class="signup-brand col-12 col-lg-6">
+                    <a href="index.html" class="signup-logo">
+                        <img src="uky-logo.png" alt="UKY home">
+                    </a>
+                    <div class="signup-brand-message">
+                        <p class="signup-eyebrow">PRELOVED FINDS. NEW POSSIBILITIES.</p>
+                        <h2>Find Your Own Style.</h2>
+                        <p class="signup-brand-description">Discover unique pieces, explore fresh looks, and give great finds a second chapter.</p>
+                        <a href="shop.html" class="signup-browse">Explore the collection →</a>
+                    </div>
+                    <p class="signup-brand-note">UNIQUE FINDS. SECOND CHANCES.</p>
+                </section>
+                <section class="signup-panel col-12 col-lg-6">
+                    <a href="index.html" class="signup-back">← Back to UKY</a>
+                    <div class="signup-form-container">
+                        <p class="signup-eyebrow">WELCOME TO UKY</p>
+                        <h1>Create your account.</h1>
+                        <p class="signup-introduction">Your next great find starts here.</p>
+                        <p class="alert uky-status">Demo sign-up. Use example details. No account will be created.</p>
+                        <p id="signup-status" class="alert uky-status" role="status" tabindex="-1" hidden></p>
+                        <form class="signup-form" action="#" novalidate="" data-demo-form="signup">
+                            <noscript>
+                                <p class="alert uky-status">Enable JavaScript to try this demo form.</p>
+                            </noscript>
+                            <div class="signup-field">
+                                <label for="signup-name">Full name</label>
+                                <input type="text" id="signup-name" autocomplete="name" placeholder="Your full name" required class="form-control" aria-describedby="signup-name-error">
+                                <div class="invalid-feedback" id="signup-name-error"></div>
+                            </div>
+                            <div class="signup-field">
+                                <label for="signup-email">Email address</label>
+                                <input type="email" id="signup-email" autocomplete="email" placeholder="you@example.com" required class="form-control" aria-describedby="signup-email-error">
+                                <div class="invalid-feedback" id="signup-email-error"></div>
+                            </div>
+                            <div class="signup-field">
+                                <label for="signup-password">Password</label>
+                                <input type="password" id="signup-password" autocomplete="new-password" placeholder="Create a password" minlength="8" aria-describedby="signup-password-help signup-password-error" required class="form-control">
+                                <div class="invalid-feedback" id="signup-password-error"></div>
+                                <p id="signup-password-help" class="signup-field-help">Use at least 8 characters.</p>
+                            </div>
+                            <div class="signup-agreement">
+                                <input type="checkbox" id="signup-terms" value="agreed" required class="form-check-input" aria-describedby="signup-terms-error">
+                                <label for="signup-terms">I agree to the <a href="terms.html">Terms Conditions</a>
+                            and <a href="privacy.html">Privacy Policy</a>.
+                        </label>
+                            </div>
+                            <div class="invalid-feedback" id="signup-terms-error"></div>
+                            <button type="submit" class="signup-submit btn" disabled>Try demo sign-up</button>
+                        </form>
+                        <p class="signup-signin">Already have an account? <a href="signin.html">Sign in</a>
+                        </p>
+                    </div>
+                    <p class="signup-copyright">© 2026 UKY. All rights reserved.</p>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>

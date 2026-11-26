@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Checkout | UKY</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="bag-checkout.css">
+        <link rel="stylesheet" href="bootstrap-custom.css">
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="header-top">
+                <a class="logo" href="index.html">
+                    <img src="uky-logo.png" alt="UKY home">
+                </a>
+                <a class="brand-name" href="index.html">UKY</a>
+                <form class="search-form" action="shop.html" method="get">
+                    <input type="search" name="search" placeholder="Search UKY" aria-label="Search products" class="form-control">
+                    <button type="submit" class="btn">Search</button>
+                </form>
+            </div>
+            <div class="header-bottom">
+                <nav class="category-nav nav" aria-label="Product categories">
+                    <a href="shop.html?category=new-arrivals" class="nav-link">New Arrivals</a>
+                    <a href="shop.html?category=women" class="nav-link">Women</a>
+                    <a href="shop.html?category=men" class="nav-link">Men</a>
+                    <a href="shop.html?category=kids" class="nav-link">Kids</a>
+                    <a href="shop.html?category=accessories" class="nav-link">Accessories</a>
+                    <a href="shop.html?category=brands" class="nav-link">Brands</a>
+                </nav>
+                <nav class="account-nav nav" aria-label="Your account">
+                    <a href="favorites.html" class="nav-link">
+                        <span class="account-icon" aria-hidden="true">♡</span>
+                        <span>Favorites</span>
+                    </a>
+                    <a href="signup.html" class="nav-link">
+                        <span class="profile-icon" aria-hidden="true"></span>
+                        <span>Sign Up</span>
+                    </a>
+                    <a href="cart.html" class="nav-link">
+                        <span class="account-icon" aria-hidden="true">🛒</span>
+                        <span>Bag (<span data-bag-count="">1</span>)</span>
+                    </a>
+                </nav>
+            </div>
+        </header>
+        <main class="uky-order-main">
+            <nav class="order-progress" aria-label="Checkout steps">
+                <a href="cart.html">1. Bag</a>
+                <span aria-hidden="true">→</span>
+                <span class="order-current-step">2. Checkout</span>
+            </nav>
+            <div class="order-page-heading">
+                <div>
+                    <p class="order-eyebrow">ONE STEP CLOSER</p>
+                    <h1>Checkout</h1>
+                </div>
+                <a href="cart.html" class="order-text-link">Back to bag</a>
+            </div>
+            <p class="order-demo-note">
+                <strong>Demo checkout.</strong> Use example details to try the form. No order will be placed and no payment will be taken.
+            </p>
+            <p id="checkout-status" class="alert uky-status" role="status" tabindex="-1" hidden></p>
+            <section id="checkout-empty" class="order-card card" hidden>
+                <h2>Your bag is empty.</h2>
+                <p>Add the sample item before trying checkout.</p>
+                <a href="cart.html" class="order-button btn">Return to bag</a>
+            </section>
+            <a id="checkout-finished-link" href="cart.html" class="order-text-link" hidden>Return to bag</a>
+            <p class="alert uky-status" data-storage-note hidden>Your browser cannot save the demo bag. Changes last only on this page.</p>
+            <form action="#" class="checkout-form" novalidate="" data-demo-form="checkout">
+                <noscript>
+                    <p class="alert uky-status">Enable JavaScript to try this demo form.</p>
+                </noscript>
+                <div class="row g-4 align-items-start">
+                    <div class="checkout-fields col-12 col-lg-8">
+                        <section class="order-card checkout-section card">
+                            <h2>
+                                <span class="checkout-step">01</span> Contact details</h2>
+                            <div class="row g-3">
+                                <div class="checkout-field col-12 col-md-6">
+                                    <label for="checkout-name">Full name</label>
+                                    <input type="text" id="checkout-name" placeholder="Full name" required class="form-control" aria-describedby="checkout-name-error" autocomplete="name">
+                                    <div class="invalid-feedback" id="checkout-name-error"></div>
+                                </div>
+                                <div class="checkout-field col-12 col-md-6">
+                                    <label for="checkout-email">Email address</label>
+                                    <input type="email" id="checkout-email" placeholder="you@example.com" required class="form-control" aria-describedby="checkout-email-error" autocomplete="email">
+                                    <div class="invalid-feedback" id="checkout-email-error"></div>
+                                </div>
+                                <div class="checkout-field col-12">
+                                    <label for="checkout-phone">Mobile number</label>
+                                    <input type="tel" id="checkout-phone" placeholder="09XX XXX XXXX" required class="form-control" aria-describedby="checkout-phone-error" inputmode="tel" autocomplete="tel">
+                                    <div class="invalid-feedback" id="checkout-phone-error"></div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="order-card checkout-section card">
+                            <h2>
+                                <span class="checkout-step">02</span> Delivery address</h2>
+                            <div class="row g-3">
+                                <div class="checkout-field col-12">
+                                    <label for="checkout-address">House / unit number and street</label>
+                                    <input type="text" id="checkout-address" placeholder="House, building, and street" required class="form-control" aria-describedby="checkout-address-error" autocomplete="street-address">
+                                    <div class="invalid-feedback" id="checkout-address-error"></div>
+                                </div>
+                                <div class="checkout-field col-12 col-md-6">
+                                    <label for="checkout-barangay">Barangay</label>
+                                    <input type="text" id="checkout-barangay" placeholder="Barangay" required class="form-control" aria-describedby="checkout-barangay-error">
+                                    <div class="invalid-feedback" id="checkout-barangay-error"></div>
+                                </div>
+                                <div class="checkout-field col-12 col-md-6">
+                                    <label for="checkout-city">City / municipality</label>
+                                    <input type="text" id="checkout-city" placeholder="City or municipality" required class="form-control" aria-describedby="checkout-city-error" autocomplete="address-level2">
+                                    <div class="invalid-feedback" id="checkout-city-error"></div>
+                                </div>
+                                <div class="checkout-field col-12 col-md-6">
+                                    <label for="checkout-province">Province / region</label>
+                                    <input type="text" id="checkout-province" placeholder="Province or region" required class="form-control" aria-describedby="checkout-province-error" autocomplete="address-level1">
+                                    <div class="invalid-feedback" id="checkout-province-error"></div>
+                                </div>
+                                <div class="checkout-field col-12 col-md-6">
+                                    <label for="checkout-postcode">Postal code</label>
+                                    <input type="text" id="checkout-postcode" placeholder="4-digit postal code" required class="form-control" aria-describedby="checkout-postcode-error" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" autocomplete="postal-code">
+                                    <div class="invalid-feedback" id="checkout-postcode-error"></div>
+                                </div>
+                            </div>
+                            <p class="order-small-text checkout-country">Country: Philippines</p>
+                        </section>
+                        <section class="order-card checkout-section card">
+                            <h2>
+                                <span class="checkout-step">03</span> Delivery and payment</h2>
+                            <div class="checkout-delivery-row">
+                                <div>
+                                    <strong>Standard delivery</strong>
+                                    <p class="order-small-text">Sample delivery option</p>
+                                </div>
+                                <strong>₱80.00</strong>
+                            </div>
+                            <div class="checkout-field">
+                                <label for="checkout-payment">Payment method</label>
+                                <select id="checkout-payment" required class="form-select" aria-describedby="checkout-payment-error">
+                                    <option value="">Choose a demo payment method</option>
+                                    <option value="cod">Cash on delivery — demo</option>
+                                    <option value="gcash">GCash — demo</option>
+                                    <option value="bank">Bank transfer — demo</option>
+                                </select>
+                                <div class="invalid-feedback" id="checkout-payment-error"></div>
+                            </div>
+                            <p class="order-small-text">Payment options are for this preview only.</p>
+                        </section>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <section class="order-card checkout-summary card">
+                            <h2>Order summary</h2>
+                            <div class="checkout-mini-item">
+                                <img src="sbsfour.png" alt="Burgundy preloved shoulder bag">
+                                <div>
+                                    <h3>Everyday Shoulder Bag</h3>
+                                    <p>Burgundy · Qty: 1</p>
+                                    <strong>₱450.00</strong>
+                                </div>
+                            </div>
+                            <div class="order-price-row">
+                                <span>Item subtotal</span>
+                                <span data-price="subtotal">₱450.00</span>
+                            </div>
+                            <div class="order-price-row">
+                                <span>Sample delivery fee</span>
+                                <span data-price="delivery">₱80.00</span>
+                            </div>
+                            <div class="order-price-row order-price-total">
+                                <strong>Total</strong>
+                                <strong data-price="total">₱530.00</strong>
+                            </div>
+                            <p class="order-small-text">Sample prices in Philippine pesos.</p>
+                            <div class="checkout-agreement">
+                                <input type="checkbox" id="checkout-understand" required class="form-check-input" aria-describedby="checkout-understand-error">
+                                <label for="checkout-understand">I understand this is a demo and no order will be placed.</label>
+                            </div>
+                            <div class="invalid-feedback" id="checkout-understand-error"></div>
+                            <button type="submit" class="order-button order-button-full btn" disabled>Complete demo checkout</button>
+                            <a href="cart.html" class="order-text-link checkout-return">Return to bag</a>
+                        </section>
+                    </div>
+                </div>
+            </form>
+        </main>
+        <footer class="uky-footer">
+            <div class="uky-footer-inner">
+                <div class="row g-4">
+                    <div class="uky-footer-column col-12 col-sm-6 col-lg-3">
+                        <h2>UKY</h2>
+                        <a href="about.html">About Us</a>
+                        <a href="about.html#our-story">Our Story</a>
+                        <a href="about.html#preloved">Why Preloved?</a>
+                    </div>
+                    <div class="uky-footer-column col-12 col-sm-6 col-lg-3">
+                        <h2>Sell</h2>
+                        <a href="sell.html">Sell with UKY</a>
+                        <a href="sell.html#how-it-works">How It Works</a>
+                        <a href="sell.html#guidelines">Selling Guidelines</a>
+                        <a href="help.html#shipping">Shipping</a>
+                    </div>
+                    <div class="uky-footer-column col-12 col-sm-6 col-lg-3">
+                        <h2>Help</h2>
+                        <a href="help.html">Help Center</a>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="help.html#payments">Payment Options</a>
+                        <a href="help.html#returns">Returns Refunds</a>
+                    </div>
+                    <div class="uky-footer-intro col-12 col-sm-6 col-lg-3">
+                        <h2>Find Your Own Style.</h2>
+                        <p>Discover unique preloved pieces, explore fresh looks, and give great finds a second chapter.</p>
+                        <a href="shop.html" class="uky-footer-button btn">EXPLORE UKY</a>
+                    </div>
+                </div>
+            </div>
+            <div class="uky-footer-bottom">
+                <p>2026 UKY. All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>
